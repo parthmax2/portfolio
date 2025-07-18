@@ -1,0 +1,569 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Saksham Pathak - Generative AI Engineer
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Scrollbar for projects container on desktop */
+    ::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #7c3aed;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Typing animation caret */
+    .typing-caret {
+      border-right: 2px solid #ddd;
+      animation: blink-caret 0.8s step-end infinite;
+    }
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #ddd;
+      }
+    }
+
+    /* AOS-like fade up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900 font-sans leading-relaxed selection:bg-purple-400 selection:text-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-gray-900 text-white shadow-md" role="banner">
+   <nav aria-label="Primary Navigation" class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <a class="text-2xl font-bold tracking-wide hover:text-purple-400 transition-colors duration-300" href="#home">
+     Saksham Pathak
+    </a>
+    <ul aria-label="Primary Navigation Menu" class="hidden md:flex space-x-8 text-lg font-medium" role="menubar">
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#home" role="menuitem">
+       Home
+      </a>
+     </li>
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#about" role="menuitem">
+       About
+      </a>
+     </li>
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#skills" role="menuitem">
+       Skills
+      </a>
+     </li>
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#projects" role="menuitem">
+       Projects
+      </a>
+     </li>
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#certifications" role="menuitem">
+       Certifications
+      </a>
+     </li>
+     <li role="none">
+      <a class="hover:text-purple-400 transition-colors duration-300" href="#contact" role="menuitem">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-expanded="false" aria-label="Toggle menu" class="md:hidden focus:outline-none focus:ring-2 focus:ring-purple-400" id="nav-toggle">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-gray-900 px-6 pb-4 space-y-4 text-lg font-medium" id="mobile-menu">
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#home">
+     Home
+    </a>
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#about">
+     About
+    </a>
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#skills">
+     Skills
+    </a>
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#projects">
+     Projects
+    </a>
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#certifications">
+     Certifications
+    </a>
+    <a class="block hover:text-purple-400 transition-colors duration-300" href="#contact">
+     Contact
+    </a>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-blue-600 to-purple-700 text-white" id="home">
+   <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 drop-shadow-lg" data-animate="fade-up">
+    Hi, I'm Saksham Pathak
+   </h1>
+   <p class="text-2xl sm:text-3xl font-semibold mb-6 drop-shadow-md" data-animate="fade-up" style="transition-delay: 0.1s">
+    Generative AI Engineer
+   </p>
+   <p aria-atomic="true" aria-live="polite" class="text-xl sm:text-2xl font-mono h-8 sm:h-10 mb-10 typing-caret" data-animate="fade-up" id="typing-text" style="transition-delay: 0.2s">
+   </p>
+   <div class="flex flex-col sm:flex-row gap-4">
+    <a class="px-8 py-3 rounded-md bg-white text-purple-700 font-semibold shadow-lg hover:bg-purple-100 transition-colors duration-300 transform hover:-translate-y-1" download="" href="resume.pdf">
+     Download Resume
+    </a>
+    <button class="px-8 py-3 rounded-md border-2 border-white text-white font-semibold hover:bg-white hover:text-purple-700 transition-colors duration-300 transform hover:-translate-y-1" id="btn-contact">
+     Contact Me
+    </button>
+   </div>
+   <img alt="Abstract AI generative art with blue and purple gradient shapes and digital neural network patterns" class="mt-16 max-w-full rounded-lg shadow-lg" data-animate="fade-up" height="400" src="https://storage.googleapis.com/a1aa/image/97e2a1a7-dc83-4988-2d27-9322ba29b281.jpg" style="transition-delay: 0.3s" width="600"/>
+  </section>
+  <!-- About Section -->
+  <section aria-labelledby="about-heading" class="max-w-5xl mx-auto px-6 py-20" id="about">
+   <h2 class="text-4xl font-extrabold mb-8 text-center text-gray-900" data-animate="fade-up" id="about-heading">
+    About Me
+   </h2>
+   <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed whitespace-pre-line" data-animate="fade-up" style="transition-delay: 0.1s">
+    Generative AI Engineer with hands-on experience in full-stack AI
+      systems, LLM fine-tuning (LoRA on Flan-T5, GPT-2), and
+      Retrieval-Augmented Generation (RAG) pipelines. Skilled in developing
+      scalable GenAI applications using LangChain, Hugging Face
+      Transformers, FastAPI, and vector databases. Proficient in CUDA
+      optimization, prompt engineering, and model alignment techniques.
+      Passionate about building secure, interpretable, and production-grade
+      GenAI systems.
+   </p>
+  </section>
+  <!-- Skills Section -->
+  <section aria-labelledby="skills-heading" class="bg-gray-50 py-20 px-6" id="skills">
+   <h2 class="text-4xl font-extrabold mb-12 text-center text-gray-900" data-animate="fade-up" id="skills-heading">
+    Skills
+   </h2>
+   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="fade-up" style="transition-delay: 0.1s">
+    <!-- Languages -->
+    <div aria-label="Languages skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      Languages
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Python
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       JavaScript
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       C++
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       HTML
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       CSS
+      </span>
+     </div>
+    </div>
+    <!-- GenAI/ML Tools -->
+    <div aria-label="GenAI and Machine Learning Tools skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      GenAI/ML Tools
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       LangChain
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       LangGraph
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       LlamaIndex
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Hugging Face Transformers
+      </span>
+     </div>
+    </div>
+    <!-- LLM Fine-Tuning -->
+    <div aria-label="LLM Fine-Tuning skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      LLM Fine-Tuning
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Flan-T5
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       GPT-2
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       LoRA
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       QLoRA
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       PEFT
+      </span>
+     </div>
+    </div>
+    <!-- Infrastructure -->
+    <div aria-label="Infrastructure skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      Infrastructure
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Docker
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Kubernetes
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       CUDA
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       MLflow
+      </span>
+     </div>
+    </div>
+    <!-- RAG Pipelines -->
+    <div aria-label="RAG Pipelines skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      RAG Pipelines
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       FAISS
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       ChromaDB
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Embedding Search
+      </span>
+     </div>
+    </div>
+    <!-- Web Development -->
+    <div aria-label="Web Development skills" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" tabindex="0">
+     <h3 class="text-2xl font-semibold mb-4 text-purple-700">
+      Web Development
+     </h3>
+     <div class="flex flex-wrap gap-3">
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       FastAPI
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Flask
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       Tailwind CSS
+      </span>
+      <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-medium">
+       REST APIs
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Projects Section -->
+  <section aria-labelledby="projects-heading" class="max-w-7xl mx-auto px-6 py-20" id="projects">
+   <h2 class="text-4xl font-extrabold mb-12 text-center text-gray-900" data-animate="fade-up" id="projects-heading">
+    Projects
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" data-animate="fade-up" style="transition-delay: 0.1s">
+    <!-- Project 1: FALCON -->
+    <article aria-label="Project FALCON: Fake News Analysis and Claim Verification System" class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" tabindex="0">
+     <img alt="Screenshot of FALCON project showing a fact-checking dashboard with charts and text analysis" class="rounded-md mb-4 object-cover h-48 w-full" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c972a9a4-109b-43bf-bca0-27357e1085b1.jpg" width="600"/>
+     <h3 class="text-2xl font-semibold mb-2 text-purple-700">
+      FALCON
+     </h3>
+     <p class="text-gray-700 mb-3 flex-grow">
+      Fake News Analysis and Claim Verification System using LLM pipelines.
+     </p>
+     <ul class="list-disc list-inside text-gray-600 mb-4">
+      <li>
+       Integrated Serper API + Wikipedia API for real-time fact-checking.
+      </li>
+      <li>
+       Built with LangChain, FastAPI, Hugging Face Transformers.
+      </li>
+     </ul>
+     <div class="mt-auto flex space-x-4">
+      <a aria-label="GitHub repository for FALCON project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="https://github.com/parthmax2" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-github fa-lg">
+       </i>
+      </a>
+      <a aria-label="Hugging Face link for FALCON project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-huggingface fa-lg">
+       </i>
+      </a>
+     </div>
+    </article>
+    <!-- Project 2: FaceAging AI -->
+    <article aria-label="Project FaceAging AI: Realistic face aging and de-aging web app" class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" tabindex="0">
+     <img alt="Screenshot of FaceAging AI app showing realistic face aging and de-aging transformations on portraits" class="rounded-md mb-4 object-cover h-48 w-full" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7968343e-e9bc-499a-2c8b-37c9fa144982.jpg" width="600"/>
+     <h3 class="text-2xl font-semibold mb-2 text-purple-700">
+      FaceAging AI
+     </h3>
+     <p class="text-gray-700 mb-3 flex-grow">
+      Realistic face aging and de-aging web app using OpenCV and deep learning.
+     </p>
+     <ul class="list-disc list-inside text-gray-600 mb-4">
+      <li>
+       FastAPI backend and responsive frontend.
+      </li>
+      <li>
+       Auto face detection and transformation.
+      </li>
+     </ul>
+     <div class="mt-auto flex space-x-4">
+      <a aria-label="GitHub repository for FaceAging AI project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="https://github.com/parthmax2" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-github fa-lg">
+       </i>
+      </a>
+      <a aria-label="Hugging Face link for FaceAging AI project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-huggingface fa-lg">
+       </i>
+      </a>
+     </div>
+    </article>
+    <!-- Project 3: LLM Fine-Tuning -->
+    <article aria-label="Project LLM Fine-Tuning: Fine-tuned Flan-T5 and GPT-2 using LoRA" class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" tabindex="0">
+     <img alt="Image showing code snippets and training workflow for LLM fine-tuning with LoRA on Flan-T5 and GPT-2" class="rounded-md mb-4 object-cover h-48 w-full" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/427cd305-daca-4e85-c4b4-5896596e2687.jpg" width="600"/>
+     <h3 class="text-2xl font-semibold mb-2 text-purple-700">
+      LLM Fine-Tuning
+     </h3>
+     <p class="text-gray-700 mb-3 flex-grow">
+      Fine-tuned Flan-T5 and GPT-2 using LoRA on custom datasets.
+     </p>
+     <ul class="list-disc list-inside text-gray-600 mb-4">
+      <li>
+       Built custom CUDA workflows avoiding Trainer API.
+      </li>
+      <li>
+       Optimized with bitsandbytes under limited GPU resources.
+      </li>
+     </ul>
+     <div class="mt-auto flex space-x-4">
+      <a aria-label="GitHub repository for LLM Fine-Tuning project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="https://github.com/parthmax2" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-github fa-lg">
+       </i>
+      </a>
+     </div>
+    </article>
+    <!-- Project 4: RAG System -->
+    <article aria-label="Project RAG System: RAG pipeline using LangChain and FAISS/ChromaDB" class="bg-white rounded-lg shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" tabindex="0">
+     <img alt="Diagram and UI screenshot of RAG System pipeline using LangChain and FAISS/ChromaDB for semantic search" class="rounded-md mb-4 object-cover h-48 w-full" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ea45e14-e30f-4b29-0a30-4d93b2e7718e.jpg" width="600"/>
+     <h3 class="text-2xl font-semibold mb-2 text-purple-700">
+      RAG System
+     </h3>
+     <p class="text-gray-700 mb-3 flex-grow">
+      RAG pipeline using LangChain + FAISS/ChromaDB for semantic search.
+     </p>
+     <ul class="list-disc list-inside text-gray-600 mb-4">
+      <li>
+       Dockerized backend, API key security, real-time QA.
+      </li>
+     </ul>
+     <div class="mt-auto flex space-x-4">
+      <a aria-label="GitHub repository for RAG System project" class="text-purple-700 hover:text-purple-900 transition-colors duration-300" href="https://github.com/parthmax2" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-github fa-lg">
+       </i>
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Certifications Section -->
+  <section aria-labelledby="certifications-heading" class="bg-gray-50 py-20 px-6" id="certifications">
+   <h2 class="text-4xl font-extrabold mb-12 text-center text-gray-900" data-animate="fade-up" id="certifications-heading">
+    Achievements &amp; Certifications
+   </h2>
+   <ul class="max-w-3xl mx-auto list-disc list-inside space-y-4 text-lg text-gray-700" data-animate="fade-up" style="transition-delay: 0.1s">
+    <li>
+     Qualified IIT JAM (2024) in Mathematics
+    </li>
+    <li>
+     Google Cloud: Introduction to Generative AI (Credential ID: 14325930)
+    </li>
+    <li>
+     Deployed 4+ GenAI applications on Hugging Face Spaces (FALCON, FaceAging AI, etc.)
+    </li>
+   </ul>
+  </section>
+  <!-- Contact Section -->
+  <section aria-labelledby="contact-heading" class="max-w-4xl mx-auto px-6 py-20" id="contact">
+   <h2 class="text-4xl font-extrabold mb-12 text-center text-gray-900" data-animate="fade-up" id="contact-heading">
+    Contact Me
+   </h2>
+   <div class="flex flex-col md:flex-row md:space-x-12 space-y-12 md:space-y-0" data-animate="fade-up" style="transition-delay: 0.1s">
+    <div class="md:w-1/2 space-y-6 text-gray-700">
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-envelope fa-lg text-purple-700">
+      </i>
+      <a class="hover:text-purple-600 transition-colors duration-300" href="mailto:pathaksaksham430@gmail.com">
+       pathaksaksham430@gmail.com
+      </a>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-phone fa-lg text-purple-700">
+      </i>
+      <a class="hover:text-purple-600 transition-colors duration-300" href="tel:+916392425859">
+       +91-6392425859
+      </a>
+     </div>
+     <div class="flex items-center space-x-6 text-2xl">
+      <a aria-label="GitHub profile" class="text-gray-700 hover:text-purple-700 transition-colors duration-300" href="https://github.com/parthmax2" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-github">
+       </i>
+      </a>
+      <a aria-label="LinkedIn profile" class="text-gray-700 hover:text-purple-700 transition-colors duration-300" href="https://linkedin.com/in/sakshampathak" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-linkedin">
+       </i>
+      </a>
+      <a aria-label="Portfolio website" class="text-gray-700 hover:text-purple-700 transition-colors duration-300" href="https://parthmax2.github.io/portfolio" rel="noopener noreferrer" target="_blank">
+       <i class="fas fa-globe">
+       </i>
+      </a>
+     </div>
+    </div>
+    <form action="mailto:pathaksaksham430@gmail.com" aria-label="Contact form" class="md:w-1/2 bg-white rounded-lg shadow-md p-8" enctype="text/plain" method="POST">
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-gray-900" for="name">
+       Name
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500" id="name" name="Name" placeholder="Your full name" required="" type="text"/>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-gray-900" for="email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500" id="email" name="Email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="mb-6">
+      <label class="block mb-2 font-semibold text-gray-900" for="message">
+       Message
+      </label>
+      <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500" id="message" name="Message" placeholder="Write your message here..." required="" rows="5"></textarea>
+     </div>
+     <button class="w-full bg-purple-700 text-white font-semibold py-3 rounded-md hover:bg-purple-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500" type="submit">
+      Send Message
+     </button>
+    </form>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center select-none">
+   <p class="text-sm sm:text-base">
+    © 2025 Saksham Pathak | Built with
+    <span aria-label="love">
+     ❤
+    </span>
+    using
+      Tailwind CSS
+   </p>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    navToggle.addEventListener("click", () => {
+      const expanded =
+        navToggle.getAttribute("aria-expanded") === "true" ? "false" : "true";
+      navToggle.setAttribute("aria-expanded", expanded);
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Close mobile menu on link click
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    });
+
+    // Contact Me button scroll
+    document.getElementById("btn-contact").addEventListener("click", () => {
+      const contactSection = document.getElementById("contact");
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    // Typing animation for hero text
+    const typingText = document.getElementById("typing-text");
+    const phrases = [
+      "LLM Fine-Tuning",
+      "RAG Systems",
+      "AI Solutions",
+    ];
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+    let typingSpeed = 100;
+    let pauseBetweenPhrases = 1500;
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      if (!isDeleting) {
+        currentText = currentPhrase.substring(0, letterIndex + 1);
+        letterIndex++;
+        typingText.textContent = currentText;
+        if (letterIndex === currentPhrase.length) {
+          isDeleting = true;
+          setTimeout(type, pauseBetweenPhrases);
+          return;
+        }
+      } else {
+        currentText = currentPhrase.substring(0, letterIndex - 1);
+        letterIndex--;
+        typingText.textContent = currentText;
+        if (letterIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      }
+      setTimeout(type, isDeleting ? typingSpeed / 2 : typingSpeed);
+    }
+    type();
+
+    // Fade-up animation on scroll
+    const animatedElements = document.querySelectorAll("[data-animate='fade-up']");
+    function checkFadeUp() {
+      const triggerBottom = window.innerHeight * 0.9;
+      animatedElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add("show");
+        }
+      });
+    }
+    window.addEventListener("scroll", checkFadeUp);
+    window.addEventListener("load", checkFadeUp);
+  </script>
+ </body>
+</html>
